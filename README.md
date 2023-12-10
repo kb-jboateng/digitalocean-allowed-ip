@@ -7,7 +7,7 @@ This action allows you to add and/or removed the runner''s public IPv4 address t
 ## Usage
 ```yaml
   - name: Add Runner IP
-  - uses: kb-jboateng/digitalocean-allowed-ip
+  - uses: kb-jboateng/digitalocean-allowed-ip@v0.1
   - with:
       action: "add"
       max_retries: "4"
@@ -18,7 +18,7 @@ This action allows you to add and/or removed the runner''s public IPv4 address t
     run: echo "running action against database"
 
   - name Remove Runner IP
-  - uses: kb-jboateng/digitalocean-allowed-ip
+  - uses: kb-jboateng/digitalocean-allowed-ip@v0.1
   - with:
       action: "remove"
       max_retries: "4"
