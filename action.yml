@@ -1,0 +1,23 @@
+name : 'Digial Ocean Managed Database Trusted IP'
+description: 'Add and/or removed the runner''s public IPv4 address to digital ocean manaaged database trusted sources'
+author: 'kb-jboateng'
+branding:
+  icon: 'database'
+  color: 'purple'
+inputs:
+  action:
+    description: 'add or remove'
+    required: true
+  database_id:
+    description: 'The uuid of the managed database'
+    required: true
+  digitalocean_token:
+    description: 'Digital Access Token'
+    required: true
+  max_retries:
+    description: 'How many retries on the ipify apis before failing'
+    default: '5'
+    required: false
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
